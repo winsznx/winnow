@@ -1,0 +1,10 @@
+open_clip_torch
+torch
+tabpfn==2.0.9
+scikit-learn
+lxml
+numpy
+pandas
+pyarrow
+opencv-python
+pytest

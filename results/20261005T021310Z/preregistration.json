@@ -1,0 +1,24 @@
+{
+  "written_before_run": true,
+  "primary_split": "first 25% of segments by time is seed, rest held out",
+  "secondary_split": "random 25% of segments is seed (content shift not blocked), labeled secondary",
+  "arms_added": {
+    "generic": "logistic regression on all users' labels from the other 24 videos, no labels from this video. Logreg replaces TabPFN because the stacked training set (~33k rows) exceeds TabPFN's 10k-row limit. PCA(64) fit on the other videos' embeddings, C=1, no tuning.",
+    "hybrid": "TabPFN on this editor's seed rows with the generic score (probability) as an extra feature",
+    "personal": "the existing tabpfn arm"
+  },
+  "renamed": {
+    "crowd": "crowd_oracle (not deployable)"
+  },
+  "verdict": {
+    "personal_adds_value": "hybrid minus generic at 20% depth, 95% bootstrap CI lower bound > 0 -> PASS, else NULL"
+  },
+  "also_reported": [
+    "generic minus chronological at 20% depth"
+  ],
+  "unchanged": [
+    "learns_personal_taste",
+    "beats_similarity",
+    "skip rule: fewer than 3 seed positives"
+  ]
+}
