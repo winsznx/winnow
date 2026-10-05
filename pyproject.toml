@@ -2,6 +2,7 @@
 name = "winnow"
 version = "0.1.0"
 requires-python = ">=3.11"
+license = "MIT"
 dependencies = [
   "open_clip_torch", "torch", "tabpfn==2.0.9", "scikit-learn", "lxml",
   "numpy", "pandas", "pyarrow", "opencv-python", "scipy",

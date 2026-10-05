@@ -102,6 +102,10 @@ SumMe: Videos: not owned by the authors, provided for non-commercial research pu
 - The marker CSV and FCPXML have not been import-tested in Resolve, Final Cut or Premiere.
 - One dataset, category-level evidence, no claim about any individual editor.
 
+## License
+
+The code is MIT licensed (see LICENSE). The SumMe dataset has its own terms, above.
+
 ## Deadline note
 
 The Hacktoberfest Weekend Challenge closes at 06:59 UTC on Oct 5, 2026. Any commit made after that time was made after the deadline.
